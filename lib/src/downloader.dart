@@ -162,7 +162,7 @@ class FlutterDownloader {
             filename: item['file_name'] as String?,
             savedDir: item['saved_dir'] as String,
             timeCreated: item['time_created'] as int,
-            allowCellular: item['allow_cellular'] as bool,
+            allowCellular: (item['allow_cellular'] as bool?) ?? true,
           );
         },
       ).toList();
